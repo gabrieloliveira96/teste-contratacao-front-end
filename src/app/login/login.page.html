@@ -1,0 +1,56 @@
+<ion-content [fullscreen]="true">
+  <div>
+    <ion-img class="logo" src="https://i.pinimg.com/236x/62/ea/4e/62ea4eac165c5a0c374c92a2800443ae.jpg"></ion-img>
+
+  </div>
+
+  <form [formGroup]="loginForm">
+
+    <div class="form">
+      <div class="error_messages">
+        <ng-container>
+          <div class="error_messages">
+            {{error_return}}
+          </div>
+        </ng-container>
+      </div>
+      <ion-row>
+        <ion-input formControlName="email" class="input" type="email" placeholder="Email" inputmode="email"></ion-input>
+      </ion-row>
+      <div class="error_messages">
+        <ng-container *ngFor="let error of error_messages.email">
+          <div class="error_messages"
+            *ngIf="loginForm.get('email').hasError(error.type) && (loginForm.get('email').dirty || loginForm.get('email').touched)">
+            {{error.message}}
+          </div>
+        </ng-container>
+      </div>
+      <ion-row>
+        <ion-input formControlName="password" class="input" type="password" placeholder="Senha">
+        </ion-input>
+      </ion-row>
+      <div class="error_messages">
+        <ng-container *ngFor="let error of error_messages.password">
+          <div class="error_messages"
+            *ngIf="loginForm.get('password').hasError(error.type) && (loginForm.get('password').dirty || loginForm.get('password').touched)">
+            {{error.message}}
+          </div>
+        </ng-container>
+      </div>
+
+
+      <div>
+        <ion-button [disabled]="!loginForm.valid" (click)="onClickLoginHandler();" routerdirection="forward"
+          class="entrar" expand="block" shape="round">Entrar</ion-button>
+      </div>
+      <!-- <ion-row>
+      <ion-button class="btnEntrar" routerLink="/home" routerdirection="forward" color="Light" shape="round"
+        expand="block">Entrar</ion-button>
+    </ion-row> -->
+      <ion-row>
+        <ion-button class="btnEsqueciSenha" expand="block" shape="round" color="Light">Esqueci minha senha</ion-button>
+      </ion-row>
+
+    </div>
+  </form>
+</ion-content>

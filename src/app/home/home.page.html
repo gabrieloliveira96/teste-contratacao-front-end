@@ -1,0 +1,45 @@
+<ion-app >
+  <ion-menu side="start" menuId="first" contentId="content1">
+    <div class="avatar">
+      <ion-item>
+        <ion-thumbnail slot="start">
+          <img src={{user.photo}}>
+        </ion-thumbnail>
+        <ion-col>
+          <ion-row>
+            <ion-label class="nameUser">{{user.nome}}</ion-label>
+          </ion-row>
+          <ion-row>
+            <ion-label class="detalhesUser">{{user.cidade}}, {{user.estado}}</ion-label>
+          </ion-row>
+        </ion-col>
+      </ion-item>
+    </div>
+    <ion-content>
+      <ion-list class="custom" *ngFor="let pages of navigate">
+        <ion-menu-toggle auto-hide="true">
+          <ion-item [routerLink]="pages.url" routerDirection="forward">
+            <ion-icon [name]="pages.icon" slot="start"></ion-icon>
+            <ion-text class="itemText">{{pages.title}}</ion-text>
+          </ion-item>
+        </ion-menu-toggle>
+      </ion-list>
+    </ion-content>
+  </ion-menu>
+  <ion-router-outlet id="content1"></ion-router-outlet>
+  <ion-content class="background">
+    <div class="modal">
+      <div class="modalText">
+        <ion-label>Bem Vindo</ion-label>        
+      </div>
+      <div class="modalText">
+        <ion-text>Olá, {{user.nome}} {{user.sobrenome}}, está é sua home page</ion-text>
+      </div>
+      <div class="modalText">
+        <ion-text>Abra o side menu para mais opções</ion-text>
+      </div>
+    </div>
+  </ion-content>
+
+
+</ion-app>

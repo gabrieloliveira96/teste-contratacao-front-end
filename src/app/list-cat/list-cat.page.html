@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-toolbar class="new-background-color">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/home" style="color: #2699FB;"></ion-back-button>
+      <ion-title class="headerName">Cats</ion-title>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+
+
+<ion-content>
+  <ion-list class="custom" *ngFor="let cat of cats; let i= index" >
+    <ion-item button (click)="openModal(i)">
+      <ion-thumbnail slot="start">
+        <img src="{{cat.photo}}">
+      </ion-thumbnail>
+      <ion-col>
+        <ion-row>
+          <ion-label>{{cat.nome}} {{cat.sobrenome}}</ion-label>
+        </ion-row>
+        <ion-row>
+          <ion-label class="telefone">{{cat.telefone}}</ion-label>
+        </ion-row>
+      </ion-col>
+      
+
+    </ion-item>
+  </ion-list>
+</ion-content>

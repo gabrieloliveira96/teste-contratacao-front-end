@@ -1,0 +1,7 @@
+{
+  "name": "redeSocial",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}

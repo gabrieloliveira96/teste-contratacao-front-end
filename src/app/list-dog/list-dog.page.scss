@@ -1,0 +1,51 @@
+ion-content{
+
+    --ion-background-color:#FFF;
+}
+.new-background-color{
+    --background: #FFF;
+}
+.headerName{
+ 
+    color:#2699FB;
+    font-size: 32px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    float: left;
+
+}
+.header{
+    background-color: white;
+}
+
+ion-list.custom{
+    background-color: #F1F9FF;
+}
+
+ion-list.custom ion-label {
+    background: #F1F9FF;
+    color: #2699FB;
+    text-align: left;
+    font-size: 14px;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+
+  }
+  ion-list.custom ion-label.telefone{
+    font-size: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #2699FB;
+  }
+
+ ion-list.custom ion-item {
+    --background: rgba(0,0,0,0);
+    --border-color:#BCE0FD;
+
+}
+ion-list.custom ion-thumbnail{
+
+    --border-radius:100px;
+}
+
+  
+  

@@ -1,0 +1,59 @@
+<ion-header>
+  <ion-toolbar class="new-background-color">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="" (click)="closeModal()" style="color: #2699FB;"></ion-back-button>
+      <ion-title class="headerName">{{nome}}</ion-title>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="areSafe">
+    <ion-item class="custom">
+      <ion-thumbnail slot="start">
+        <img src={{photo}}>
+      </ion-thumbnail>
+      <ion-col>
+        <ion-row>
+          <ion-label>{{nome}} {{sobrenome}}</ion-label>
+        </ion-row>
+        <ion-row>
+          <ion-label class="descricao">{{cidade}}, {{estado}}</ion-label>
+        </ion-row>
+      </ion-col>
+    </ion-item>
+    <div class="areaBio">
+      <ion-text class="textBio">{{bio}}</ion-text>
+    </div>
+
+    <ion-grid class="grid">
+      <ion-row>
+        <ion-col>
+          <ion-row>
+            <ion-text>{{projetos}}</ion-text>
+          </ion-row>
+          <ion-row>
+            <ion-text>Projects</ion-text>
+          </ion-row>
+        </ion-col>
+        <ion-col>
+          <ion-row>
+            <ion-text>{{seguidos}}</ion-text>
+          </ion-row>
+          <ion-row>
+            <ion-text>Followers</ion-text>
+          </ion-row>
+        </ion-col>
+        <ion-col>
+          <ion-row>
+            <ion-text>{{seguidores}}</ion-text>
+          </ion-row>
+          <ion-row>
+            <ion-text>Following</ion-text>
+          </ion-row>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+
+  </div>
+</ion-content>

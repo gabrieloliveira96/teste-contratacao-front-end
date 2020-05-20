@@ -1,0 +1,88 @@
+ion-app{
+
+    --ion-background-color: #2699FB;
+}
+ion-content.background{
+  --background:
+  
+  url( https://image.freepik.com/fotos-gratis/fundo-desfocado-de-jardim-com-arvores-de-caminho-e-outono_23-2147781501.jpg
+  ) 
+  no-repeat center center / cover !important;
+  display :block;
+
+  width: 100%;
+  height: auto;
+}
+
+.modal{
+  width: 80%;
+  height: auto;
+  background-color: rgba(185, 185, 185, 0.8);
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border-style: solid;
+  border-width: 0.5px;
+  border-color: rgba(112, 112, 112, 1);
+}
+.modalText {
+  margin: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+
+}
+.modalText ion-label{
+  font-size: 40px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  color: rgba(38, 153, 251, 1);
+  text-align: center;
+}
+.modalText ion-text{
+  font-size: 14px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: rgba(38, 153, 251, 1);
+  text-align: center;
+}
+
+.avatar{
+  background-color:#BCE0FD;
+}
+.nameUser{
+  font-size: 14px;
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align:left;
+ 
+}
+.detalhesUser{
+  font-size: 12px;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: left;
+  
+}
+
+.itemText{
+  font-size: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+  color:white;
+  font-weight: bold;
+  background-color: rgba(0,0,0,0);
+
+  
+}
+ion-list.custom{
+  background-color: rgba(0,0,0,0);
+}
+
+ion-item {
+  --background: rgba(0,0,0,0);
+  --border-color: #2699FB;
+
+}
+
+
+
